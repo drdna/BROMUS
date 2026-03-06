@@ -1,6 +1,6 @@
 # Methods and code for characterizing EPSPS gene amplifications
 
-## Align reads against reference genomes using minimap2 script
+## Align reads against reference genomes using [minimap2[(/scripts/minimap2.sh) script
 ```bash
 sbatch $script minimap2.sh S1_reference.fasta S1_reads.fastq.gz
 sbatch $script minimap2.sh S1_reference.fasta S6_reads.fastq.gz
@@ -27,7 +27,7 @@ blastn -query EPSPS_cds.fasta -subject S6_reference.fasta -outfmt 6 | awk '$3 > 
 ```
 samtools faidx S1_reference.fasta contig_4 > S1_Ctg4.fasta
 ```
-2. Use FACET to align assembled sequences and output gff alignments for IGV visualization:
+2. Use [FACET](https://github.com/aast242/FACET#) to align assembled sequences and output gff alignments for IGV visualization:
 ```
 FACET db_free S1_Ctg4.fasta S6_Ctg58.fasta -nc -g -x
 ```
