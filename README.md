@@ -1,6 +1,6 @@
 # Methods and code for characterizing EPSPS gene amplifications
 
-## Align reads against reference genomes using [minimap2[(/scripts/minimap2.sh) script
+## Align reads against reference genomes using [minimap2](/scripts/minimap2.sh) script
 ```bash
 sbatch $script minimap2.sh S1_reference.fasta S1_reads.fastq.gz
 sbatch $script minimap2.sh S1_reference.fasta S6_reads.fastq.gz
